@@ -1,5 +1,4 @@
 # Better Timeago
----
 
 [![NPM](https://nodei.co/npm/better-timeago.png)](https://nodei.co/npm/better-timeago/)
 
