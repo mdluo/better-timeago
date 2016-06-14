@@ -1,0 +1,39 @@
+{
+  "name": "better-timeago",
+  "version": "0.1.0",
+  "description": "Better Timeago (时间可读格式化，把 Unix 时间戳转化成“刚刚”、“5分钟前”、“今天14:00”、”昨天12:00” 等格式)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdluo/better-timeago.git"
+  },
+  "keywords": [
+    "Timeago",
+    "Chinese",
+    "Timestamp",
+    "Datetime",
+    "Date",
+    "Time",
+    "Formatter",
+    "Human",
+    "Readable",
+    "中文",
+    "时间",
+    "可阅读",
+    "格式化",
+    "刚刚",
+    "x分钟前",
+    "今天",
+    "昨天",
+    "微博"
+  ],
+  "author": "Mingdong Luo <mdluo@nsmss.com> (https://github.com/mdluo)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdluo/better-timeago/issues"
+  },
+  "homepage": "https://github.com/mdluo/better-timeago#readme"
+}
