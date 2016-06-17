@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/mdluo/better-timeago/issues"
   },
-  "homepage": "https://github.com/mdluo/better-timeago#readme"
+  "homepage": "https://github.com/mdluo/better-timeago#readme",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
 }
