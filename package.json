@@ -1,6 +1,6 @@
 {
   "name": "better-timeago",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Better Timeago (时间可读格式化，把 Unix 时间戳转化成“刚刚”、“5分钟前”、“今天14:00”、”昨天12:00” 等格式)",
   "main": "index.js",
   "scripts": {
@@ -40,6 +40,7 @@
     "chai": "^3.5.0"
   },
   "dependencies": {
+    "better-timeago-locale-en": "^1.0.0",
     "fecha": "^2.1.0"
   }
 }
