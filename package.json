@@ -1,10 +1,10 @@
 {
   "name": "better-timeago",
-  "version": "0.2.1",
-  "description": "Better Timeago (时间可读格式化，把 Unix 时间戳转化成“刚刚”、“5分钟前”、“今天14:00”、”昨天12:00” 等格式)",
+  "version": "0.3.0",
+  "description": "A lightweight lib to convert Date or timestamp to readable relative time",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -14,18 +14,20 @@
     "Timeago",
     "Chinese",
     "Timestamp",
+    "Unix",
     "Datetime",
     "Date",
     "Time",
     "Formatter",
     "Human",
     "Readable",
-    "中文",
+    "Twitter",
     "时间",
+    "时间戳",
     "可阅读",
     "格式化",
     "刚刚",
-    "x分钟前",
+    "分钟",
     "今天",
     "昨天",
     "微博"
@@ -37,7 +39,9 @@
   },
   "homepage": "https://github.com/mdluo/better-timeago#readme",
   "devDependencies": {
-    "chai": "^3.5.0"
+    "better-timeago-locale-zh-cn": "^1.0.1",
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
   },
   "dependencies": {
     "better-timeago-locale-en": "^1.0.1",
