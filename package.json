@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha"
   },
+  "engines": {
+    "node": ">= 0.8.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mdluo/better-timeago.git"
