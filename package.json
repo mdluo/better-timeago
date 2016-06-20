@@ -1,10 +1,11 @@
 {
   "name": "better-timeago",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A lightweight lib to convert Date or timestamp to readable relative time",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "uglifyjs ./lib/better-timeago.js -o ./lib/better-timeago.min.js"
   },
   "engines": {
     "node": ">= 4.4.x"
@@ -42,12 +43,13 @@
   },
   "homepage": "https://github.com/mdluo/better-timeago#readme",
   "devDependencies": {
-    "better-timeago-locale-zh-cn": "^1.0.1",
+    "better-timeago-locale-zh-cn": "^1.1.1",
     "chai": "^3.5.0",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "uglifyjs": "^2.4.10"
   },
   "dependencies": {
-    "better-timeago-locale-en": "^1.0.1",
+    "better-timeago-locale-en": "^1.1.1",
     "fecha": "^2.1.0"
   }
 }

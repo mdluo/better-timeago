@@ -78,7 +78,7 @@ describe("BTimeAgo", function() {
     });
 
     it('should print correct relative timeago', function () {
-      expect(before(MINUTE).print()).to.equal("1 minute ago");
+      expect(before(MINUTE).print()).to.equal("a minute ago");
       expect(before(2*MINUTE).print()).to.equal("2 minutes ago");
       expect(before(59*MINUTE).print()).to.equal("59 minutes ago");
     });
@@ -127,11 +127,47 @@ describe("BTimeAgo", function() {
     });
 
     it('should print relative timeage less than 5 minutes', function () {
-      expect(before(4*MINUTE+59*SECOND).print()).to.equal("4 minutes ago");
+      expect(before(4*MINUTE+44*SECOND).print()).to.equal("4 minutes ago");
     });
 
     it('should print absolute time more than 5 minutes', function () {
       expect(before(5*MINUTE).print()).to.equal("Yesterday 23:59");
     });
   });
+
+  describe('#print() #4', function () {
+    beforeEach(function() {
+      now = new Date("2016-06-18 20:00");
+      BTimeAgo.clear();
+      BTimeAgo.option({static: true});
+      BTimeAgo.now(now);
+    });
+
+    it('should print rounded relative timeage', function () {
+      expect(before(2*MINUTE+10*SECOND).print()).to.equal("2 minutes ago");
+      expect(before(2*MINUTE+44*SECOND).print()).to.equal("2 minutes ago");
+      expect(before(2*MINUTE+45*SECOND).print()).to.equal("3 minutes ago");
+      expect(before(2*MINUTE+50*SECOND).print()).to.equal("3 minutes ago");
+    });
+
+    it('should print rounded relative timeage', function () {
+      expect(before(10*MINUTE+10*SECOND).print()).to.equal("10 minutes ago");
+      expect(before(10*MINUTE+10*SECOND).print()).to.equal("10 minutes ago");
+      expect(before(10*MINUTE+45*SECOND).print()).to.equal("11 minutes ago");
+      expect(before(10*MINUTE+50*SECOND).print()).to.equal("11 minutes ago");
+    });
+  });
+
+  describe('#print() #5', function () {
+    beforeEach(function() {
+      now = new Date("2016-06-18 00:04");
+      BTimeAgo.clear();
+      BTimeAgo.option({static: true});
+      BTimeAgo.now(now);
+    });
+
+    it('should print rounded relative timeage', function () {
+      expect(before(4*MINUTE+50*SECOND).print()).to.equal("5 minutes ago");
+    });
+  })
 });
